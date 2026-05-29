@@ -1,0 +1,51 @@
+header {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    width: 20vw;
+    border: none
+}
+
+.cart img{
+    height: 2.5rem;
+}
+
+.cart{
+    display: flex;
+    margin-right: -6rem;
+}
+
+.cart p{
+    align-self: baseline;
+    padding: 0.2rem;
+    width: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart>*{
+    border: 1px red dashed;
+}
