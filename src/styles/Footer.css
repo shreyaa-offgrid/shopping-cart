@@ -1,0 +1,23 @@
+footer{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    background-color: #FAF1E6;
+    font-family: Cinzel, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+footer a{
+    color: black;
+    font-weight: bold;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+}
+
+footer a:hover{
+    background-color: #FDFAF6;
+}

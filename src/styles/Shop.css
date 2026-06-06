@@ -1,0 +1,8 @@
+main{
+    padding: 4rem clamp(2rem,10vw,8rem);
+}
+.shop-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}

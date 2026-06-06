@@ -3,3 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: Geo;
+    src: url("./assets/fonts/Geo-Regular.woff2"), 
+    url("./assets/fonts/Geo-Regular.woff");
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url("./assets/fonts/Cinzel-Regular.woff2"), 
+    url("./assets/fonts/Cinzel-Regular.woff");
+}
+
+body{
+    background-color: #FDFAF6;
+}
