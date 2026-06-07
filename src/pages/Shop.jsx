@@ -29,7 +29,7 @@ export default function Shop() {
         return (
             <main>
                 <div className="loading">
-                    <p>Loading products...</p>
+                    <h1>Loading products...</h1>
                 </div>
             </main>
         )
