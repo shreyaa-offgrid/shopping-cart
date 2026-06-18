@@ -1,11 +1,13 @@
 import "../styles/Shop.css"
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard.jsx"
+import ProductModal from "../components/ProductModal.jsx";
 
 export default function Shop() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     useEffect(() => {
         loadProducts();
@@ -49,8 +51,18 @@ export default function Shop() {
     return (
         <main>
             <div className="shop-grid">
+                {selectedProduct && (
+                    <ProductModal 
+                        product={selectedProduct} 
+                        onClose={()=>setSelectedProduct(null)}
+                    />
+                )}
                 {products.map(product => (
-                    <ProductCard {...product} key={product.id} />
+                    <ProductCard 
+                        {...product} 
+                        key={product.id} 
+                        onClick={()=>setSelectedProduct(product)}
+                    />
                 ))}
             </div>
         </main>

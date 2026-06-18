@@ -1,0 +1,100 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+dialog{
+    height: 80vh;
+    width: 60vw;
+    padding: 1rem;
+    margin:auto;
+    display: flex;
+    border: none;
+    border-radius: 2rem;
+    background-color: #FDFAF6;
+}
+
+dialog>.left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+dialog>.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+dialog .left>img{
+    max-width: 90%;
+    max-height: 80%;
+}
+
+dialog>.right>.rating{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+dialog>.right>button{
+    align-self: flex-end;
+    border: none;
+    padding: 0.8rem;
+    background-color: #064420;
+    color: white;
+    font-weight: bold;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+dialog>.right>button:hover{
+    cursor: pointer;
+    background-color:  hsl(145, 84%, 25%);
+}
+
+dialog>.right>button:active{
+    transform: scale(1.05);
+    transition: transform ease-out;
+}
+
+dialog>.right>.buy-action{
+    display: flex;
+    gap: 4rem;
+}
+
+dialog>.right>.buy-action>button{
+    border: none;
+    background-color: #064420;
+    color: #FDFAF6;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+dialog>.right>.buy-action>button:hover{
+    cursor: pointer;
+    background-color:  hsl(145, 84%, 25%);
+}
+
+dialog>.right>.buy-action>button:active{
+    transform: scale(1.05);
+    transition: transform ease-out;
+}
+
+
+
+
+

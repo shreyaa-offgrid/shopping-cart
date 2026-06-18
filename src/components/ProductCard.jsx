@@ -1,10 +1,10 @@
 import "../styles/ProductCard.css";
 import PropTypes from "prop-types";
 
-function ProductCard({ title, price, image, rating }) {
+function ProductCard({ title, price, image, rating, onClick}) {
     return (
         <div className="card-container">
-            <div className="product-card">
+            <div className="product-card" onClick={onClick}>
                 <div className="product-img">
                     <img src={image} alt={title} />
                 </div>
@@ -17,7 +17,6 @@ function ProductCard({ title, price, image, rating }) {
                 </div>
             </div>
         </div>
-        //when click on card open description too and category too
     );
 }
 
