@@ -2,10 +2,12 @@ import "../styles/Nav.css";
 
 import searchIcon from "../assets/search-icon.svg";
 import cartIcon from "../assets/shopping-cart.svg";
-
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import CartContext from "../CartContext";
 
 function Nav() {
+    const {cartItems} = useContext(CartContext);
     return (
         <header>
             <div className="links">
@@ -30,9 +32,16 @@ function Nav() {
                         alt="A shopping cart" 
                     />
                 </NavLink>
-                <p>0</p>
+                <p>{getTotalItems(cartItems)}</p>
             </div>
         </header>
     );
 }
+
+function getTotalItems(cartItems){
+    return cartItems.reduce(
+        (sum, item) => sum + item.quantity, 0
+    );
+}
+
 export default Nav;

@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../styles/ProductModal.css"
 import QuantitySelector from "./QuantitySelector";
+import CartContext from "../CartContext";
 
 export default function ProductModal({ product, onClose}) {
     const [quantity, setQuantity] = useState(1);
+    const {addToCart} = useContext(CartContext);
     return (
         <div className="modal-overlay" onClick={onClose}>
             <dialog open onClick={(event)=>event.stopPropagation()}>
@@ -13,9 +15,7 @@ export default function ProductModal({ product, onClose}) {
                 <div className="right">
                     <button onClick={onClose}>X</button>
                     <h1>{product.title}</h1>
-                    <p 
-                        style={{textTransform:"capitalize"}}
-                    >
+                    <p style={{textTransform:"capitalize"}}>
                         Category: {product.category}
                     </p>
                     <p>Product Description: {product.description}</p>
@@ -29,7 +29,7 @@ export default function ProductModal({ product, onClose}) {
                             quantity={quantity} 
                             setQuantity={setQuantity}
                         />
-                        <button>Add to Cart</button>
+                        <button onClick={()=>addToCart(product, quantity)}>Add to Cart</button>
                     </div>
                 </div>
             </dialog>
