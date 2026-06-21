@@ -32,9 +32,10 @@ function App() {
             prev.filter(item => item.id !== productId)
         );
     }
-    function updateQuantity(product, quantity) {
-        setCartItems(prev => prev.map(
-            item => item.id === product.id ?
+    function updateQuantity(productId, quantity) {
+        setCartItems(prev => 
+            prev.map(item => 
+                item.id === productId ?
                 { ...item, quantity: quantity } :
                 item
         ))

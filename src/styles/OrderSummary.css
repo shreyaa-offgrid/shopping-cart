@@ -1,0 +1,92 @@
+.summary-card{
+    display: flex;
+    padding: 2rem 4rem;
+    flex-direction: column;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border: #064420 2px dashed;
+}
+
+.summary-card>.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.summary-card>.item-total, .summary-card>.shipping, .summary-card>.order-total{
+    margin-top: 1rem;
+    font-family: Geo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-card>.order-total{
+    font-size: 1.75rem;
+}
+
+.summary-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.summary-container>div{
+    background-color: #E4EFE7;
+}
+
+.summary-container>.voucher, .summary-container>.gift-option{
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    font-family: Geo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-top: 2px #064420 solid;
+    border-bottom: 2px #064420 solid;
+}
+
+.summary-container>.voucher>img, .summary-container>.gift-option>img{
+    height: 2rem;
+    width: auto;
+}
+
+.chevron{
+    font-size: 2rem;
+    margin-right: 0rem;
+    margin-left: auto;
+}
+
+.shipping{
+    font-family: Geo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.summary-container>.gift-option>img{
+    height: 1.8rem;
+    width: auto;
+}
+
+.summary-container>button{
+    background-color: #064420;
+    color: #FDFAF6;
+    padding: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    font-family: Geo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    border: none
+}
+
+.summary-container>button:hover{
+    cursor: pointer;
+    background-color:  hsl(145, 84%, 25%);
+}
+
+.summary-container>button:active{
+    transform: scale(1.01);
+    transition: transform 2000 ease-in;
+}
