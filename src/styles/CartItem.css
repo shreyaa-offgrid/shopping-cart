@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-.detail-card>.update-actions>button:active.{
+.detail-card>.update-actions>button:active{
     transform: scale(1.01);
-    transition: transform ease-in 200ms;
+    transition: transform ease-out 200ms;
 }

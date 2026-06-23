@@ -88,5 +88,5 @@
 
 .summary-container>button:active{
     transform: scale(1.01);
-    transition: transform 2000 ease-in;
+    transition: transform ease-out 500ms;
 }

@@ -2,6 +2,7 @@ import "../styles/Shop.css"
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard.jsx"
 import ProductModal from "../components/ProductModal.jsx";
+import { PropagateLoader } from "react-spinners";
 
 export default function Shop() {
     const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ export default function Shop() {
         return (
             <main>
                 <div className="loading">
-                    <h1>Loading products...</h1>
+                    <PropagateLoader size={10}/>
                 </div>
             </main>
         )

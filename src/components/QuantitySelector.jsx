@@ -28,6 +28,7 @@ export default function QuantitySelector({ text, quantity, setQuantity}) {
                         setQuantity(quantity===1?1:quantity-1)
                     }
                 }
+                disabled={quantity===1}
             >
                 -
             </button>

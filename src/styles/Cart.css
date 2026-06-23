@@ -21,3 +21,34 @@
 .cart-main>.right{
     width: 35vw;
 }
+
+.empty-cart-ui{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-family: Geo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+.empty-cart-ui button{
+    color:white;
+    background-color: #064420;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-family: Cinzel, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
+.empty-cart-ui button:hover{
+    background-color: hsl(145, 84%, 25%);
+    cursor: pointer;
+}
+
+.empty-cart-ui button:active{
+    transform: scale(1.02);
+    transition: transform ease-out 500ms;
+}

@@ -32,6 +32,13 @@
     transition: transform ease-out;
 }
 
+.selector button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    transition: none;
+    transform: none;
+}
+
 button.minus{
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
