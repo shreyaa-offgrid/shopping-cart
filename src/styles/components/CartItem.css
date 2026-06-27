@@ -30,16 +30,16 @@
 }
 
 .detail-card>.update-actions>button{
-    color:white;
-    background-color: #064420;
-    border: none;
+    border: 1px solid #064420;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    background-color: transparent;
 }
 
 .detail-card>.update-actions>button:hover{
-    background-color: hsl(145, 84%, 25%);
+    background-color: #064420;
     cursor: pointer;
+    color: white;
 }
 
 .detail-card>.update-actions>button:active{

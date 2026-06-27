@@ -1,4 +1,4 @@
-import "../styles/Shop.css"
+import "../styles/pages/Shop.css"
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard.jsx"
 import ProductModal from "../components/ProductModal.jsx";

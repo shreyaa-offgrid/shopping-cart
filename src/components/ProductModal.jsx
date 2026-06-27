@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import "../styles/ProductModal.css"
+import "../styles/components/ProductModal.css"
 import QuantitySelector from "./QuantitySelector";
 import CartContext from "../CartContext";
 

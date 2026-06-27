@@ -1,4 +1,4 @@
-import "../styles/QuantitySelector.css"
+import "../styles/components/QuantitySelector.css"
 export default function QuantitySelector({ text, quantity, setQuantity}) {
     function handleChange(e) {
         const value = e.target.value;

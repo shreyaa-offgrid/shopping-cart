@@ -1,4 +1,4 @@
-import "../styles/Nav.css";
+import "../styles/components/Nav.css";
 
 import searchIcon from "../assets/search-icon.svg";
 import cartIcon from "../assets/shopping-cart.svg";

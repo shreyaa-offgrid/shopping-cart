@@ -1,4 +1,4 @@
-import "../styles/ProductCard.css";
+import "../styles/components/ProductCard.css";
 import PropTypes from "prop-types";
 
 function ProductCard({ title, price, image, rating, onClick}) {

@@ -1,4 +1,4 @@
-import "../styles/CartItem.css"
+import "../styles/components/CartItem.css"
 import QuantitySelector from "./QuantitySelector"
 import CartContext from "../CartContext";
 import { useContext } from "react";
