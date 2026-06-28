@@ -1,5 +1,5 @@
 import "../styles/components/OrderSummary.css"
-import { use, useContext } from "react"
+import { useContext } from "react"
 import CartContext from "../CartContext.js"
 import voucherIcon from "../assets/voucher.svg";
 import giftIcon from "../assets/gift.svg"

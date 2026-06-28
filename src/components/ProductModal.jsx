@@ -8,7 +8,7 @@ export default function ProductModal({ product, onClose}) {
     const {addToCart} = useContext(CartContext);
     const [added, setAdded] = useState(false);
     return (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay" onClick={onClose} data-testid="overlay">
             <dialog open onClick={(event)=>event.stopPropagation()}>
                 <div className="left">
                     <img src={product.image} alt={product.title} />

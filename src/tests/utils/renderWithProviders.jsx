@@ -5,10 +5,15 @@ import CartContext from "../../CartContext";
 export function renderWithProviders(ui, {
     cartItems = [],
     removeFromCart = ()=>{},
-    updateQuantity = ()=>{}
+    updateQuantity = ()=>{},
+    addToCart = ()=>{}
 } = {}){
     return render(
-        <CartContext value={{cartItems, removeFromCart, updateQuantity}}>
+        <CartContext value={
+            {
+                cartItems, removeFromCart,
+                 updateQuantity, addToCart
+            }}>
             <MemoryRouter>
                 {ui}
             </MemoryRouter>
