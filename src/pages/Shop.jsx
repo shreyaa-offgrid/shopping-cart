@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard.jsx"
 import ProductModal from "../components/ProductModal.jsx";
 import { PropagateLoader } from "react-spinners";
+import { useContext } from "react";
+import SearchContext from "../SearchContext";
 
 export default function Shop() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const { searchQuery } = useContext(SearchContext);
 
     useEffect(() => {
         loadProducts();
@@ -17,22 +20,35 @@ export default function Shop() {
     async function loadProducts() {
         setLoading(true);
         setError(null);
-        try{
+        try {
             const response = await fetch('https://fakestoreapi.com/products');
             const data = await response.json();
             setProducts(data);
-        } catch(err){
+        } catch (err) {
             setError('Failed to load products. Please try again.');
         } finally {
             setLoading(false);
         }
     }
 
-    if(loading){
+    const filteredProducts = products.filter(product => {
+        const query = searchQuery.trim().toLowerCase();
+
+        if (query === "") {
+            return true;
+        }
+
+        return (
+            product.title.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query)
+        );
+    });
+
+    if (loading) {
         return (
             <main>
                 <div className="loading">
-                    <PropagateLoader size={10}/>
+                    <PropagateLoader size={10} />
                 </div>
             </main>
         )
@@ -53,18 +69,22 @@ export default function Shop() {
         <main>
             <div className="shop-grid">
                 {selectedProduct && (
-                    <ProductModal 
-                        product={selectedProduct} 
-                        onClose={()=>setSelectedProduct(null)}
+                    <ProductModal
+                        product={selectedProduct}
+                        onClose={() => setSelectedProduct(null)}
                     />
                 )}
-                {products.map(product => (
-                    <ProductCard 
-                        {...product} 
-                        key={product.id} 
-                        onClick={()=>setSelectedProduct(product)}
+                {filteredProducts.length === 0 ? (
+                    <p className="no-results">
+                        No products found for "{searchQuery}"
+                    </p>
+                ) : (filteredProducts.map(product => (
+                    <ProductCard
+                        {...product}
+                        key={product.id}
+                        onClick={() => setSelectedProduct(product)}
                     />
-                ))}
+                )))}
             </div>
         </main>
     );
