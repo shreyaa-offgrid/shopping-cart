@@ -26,7 +26,7 @@ function Nav() {
             </form>
 
             <div className='cart'>
-                <NavLink to="/cart">
+                <NavLink to="/cart" aria-label="Cart">
                     <img 
                         src={cartIcon} 
                         alt="A shopping cart" 
